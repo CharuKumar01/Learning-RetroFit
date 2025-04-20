@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.retrofit"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.retrofit"
@@ -29,6 +29,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    dataBinding{
+        enable = true
     }
 }
 
