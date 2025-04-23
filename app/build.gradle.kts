@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.retrofit)
     // Retrofit with Scalar Converter
     implementation(libs.converter.scalars)
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
