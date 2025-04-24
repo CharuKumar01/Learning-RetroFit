@@ -46,6 +46,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation(libs.sdp.android)
+
     // Retrofit
     implementation(libs.retrofit)
     // Retrofit with Scalar Converter
