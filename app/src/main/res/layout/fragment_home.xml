@@ -3,12 +3,147 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        tools:context=".MainActivity.Fragments.ExpenseDetails">
+        android:backgroundTint="@color/peach"
+        app:cardCornerRadius="30dp"
+        app:cardUseCompatPadding="true"
+        tools:context=".MainActivity.Fragments.SelectCategoryDialog">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/iv_baby"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/baby" />
+
+            <TextView
+                android:id="@+id/tv_baby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_baby"
+                android:layout_alignStart="@id/iv_baby"
+                android:layout_alignEnd="@id/iv_baby"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:text="@string/baby" />
+
+            <ImageView
+                android:id="@+id/iv_beauty"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:layout_toEndOf="@id/iv_baby"
+                android:src="@drawable/beauty" />
+
+            <TextView
+                android:id="@+id/tv_beauty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_beauty"
+                android:layout_alignStart="@id/iv_beauty"
+                android:layout_alignEnd="@id/iv_beauty"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:text="@string/beauty" />
+
+            <ImageView
+                android:id="@+id/iv_bills"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:layout_toEndOf="@id/iv_beauty"
+                android:src="@drawable/bills" />
+
+            <TextView
+                android:id="@+id/tv_bills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_bills"
+                android:layout_alignStart="@id/iv_bills"
+                android:layout_alignEnd="@id/iv_bills"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:text="@string/bills" />
+
+            <ImageView
+                android:id="@+id/iv_car"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/tv_baby"
+                android:layout_margin="16dp"
+                android:src="@drawable/car" />
+
+            <TextView
+                android:id="@+id/tv_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_car"
+                android:layout_alignStart="@id/iv_car"
+                android:layout_alignEnd="@id/iv_car"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:text="@string/car" />
+
+            <ImageView
+                android:id="@+id/iv_clothing"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/tv_beauty"
+                android:layout_margin="16dp"
+                android:layout_toEndOf="@id/iv_car"
+                android:src="@drawable/clothing" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_clothing"
+                android:layout_alignStart="@id/iv_clothing"
+                android:layout_alignEnd="@id/iv_clothing"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:text="@string/clothing" />
+
+            <ImageView
+                android:id="@+id/iv_education"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/tv_bills"
+                android:layout_margin="16dp"
+                android:layout_toEndOf="@id/iv_clothing"
+                android:src="@drawable/education" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_clothing"
+                android:layout_alignStart="@id/iv_education"
+                android:layout_alignEnd="@id/iv_education"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:text="@string/education" />
+
+            <ImageView
+                android:id="@+id/iv_electronics"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/electronics"
+                android:layout_below="@id/tv_car"
+                android:layout_margin="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/electronics"
+                android:layout_below="@id/iv_electronics"
+                android:layout_alignStart="@id/iv_electronics"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 </layout>
