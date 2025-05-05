@@ -5,109 +5,103 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
         app:cardUseCompatPadding="true"
-        tools:context=".MainActivity.Fragments.EDDialog">
+        tools:context=".MainActivity.Fragments.SelectAccountDialog">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bck_intro_page">
+            android:layout_margin="16dp">
 
             <ImageView
-                android:id="@+id/ivCancel"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="@dimen/_100sdp"
-                android:padding="12dp"
-                android:src="@drawable/ic_cancel"
+                android:id="@+id/ivCard"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="5dp"
+                android:src="@drawable/card"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/ivDelete"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0" />
 
-            <ImageView
-                android:id="@+id/ivEdit"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="16dp"
-                android:src="@drawable/edit"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
-
-            <ImageView
-                android:id="@+id/ivDelete"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:padding="16dp"
-                android:src="@drawable/delete"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/ivEdit"
-                app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
-
             <TextView
-                android:id="@+id/tv_accountType"
+                android:id="@+id/txtViewCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/alata"
-                android:text="Expense"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivDelete"
-                app:layout_constraintVertical_bias="0.1" />
-
-            <TextView
-                android:id="@+id/tv_spentAmount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/alata"
-                android:text="0000000"
-                android:textSize="30sp"
+                android:text="@string/card"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tv_accountType"
-                app:layout_constraintStart_toStartOf="@+id/tv_accountType"
-                app:layout_constraintTop_toBottomOf="@id/tv_accountType"
-                app:layout_constraintVertical_bias="0" />
+                app:layout_constraintEnd_toEndOf="@+id/ivCard"
+                app:layout_constraintStart_toStartOf="@+id/ivCard"
+                app:layout_constraintTop_toBottomOf="@id/ivCard" />
 
             <ImageView
-                android:layout_width="300dp"
-                android:layout_height="0dp"
-                android:background="@drawable/acv_background"
-                app:layout_constraintBottom_toTopOf="@id/bottom"
+                android:id="@+id/ivCash"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="5dp"
+                android:src="@drawable/cash"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/top" />
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/ivCard"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/top"
-                android:orientation="horizontal"
+            <TextView
+                android:id="@+id/txtViewCash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintGuide_percent="0.35" />
+                android:layout_below="@id/ivCash"
+                android:layout_toEndOf="@id/txtViewCard"
+                android:text="@string/cash"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivCash"
+                app:layout_constraintStart_toStartOf="@+id/ivCash"
+                app:layout_constraintTop_toBottomOf="@id/ivCash" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/bottom"
+            <ImageView
+                android:id="@+id/ivUpi"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="5dp"
+                android:src="@drawable/qr_code"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/ivCash"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/txtViewUpi"
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
                 android:layout_height="wrap_content"
-                app:layout_constraintGuide_percent="1" />
-
+                android:layout_below="@id/ivUpi"
+                android:layout_toEndOf="@id/txtViewCash"
+                android:text="@string/upi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivUpi"
+                app:layout_constraintStart_toStartOf="@+id/ivUpi"
+                app:layout_constraintTop_toBottomOf="@id/ivUpi" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.cardview.widget.CardView>
 </layout>
